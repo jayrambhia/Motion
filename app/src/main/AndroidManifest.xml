@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fenchtose.motion">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".movement.BasicArcMotionActivity" />
+        <activity android:name=".movement.BasicLinearMotionActivity" />
+        <activity android:name=".movement.BasicScreenEnterMotionActivity" />
+        <activity android:name=".movement.BasicScreenTemporaryExitMovementActivity" />
+        <activity android:name=".movement.BasicScreenEnterRelativeMotionActivity" />
+        <activity android:name=".transformation.BasicAsymmetricTransformationActivity" />
+        <activity android:name=".transformation.BasicSymmetricTransformationActivity" />
+        <activity android:name=".transformation.FullBleedSymmetricExpansionActivity" />
+        <activity android:name=".transformation.FullBleedAsymmetricTransitionActivity" />
+        <activity android:name=".transformation.RadialLinearTransformationActivity"></activity>
+        <activity android:name=".transformation.RadialArcTransformationActivity">
+        </activity>
+        <activity android:name=".transformation.RadialFixedTransformationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
