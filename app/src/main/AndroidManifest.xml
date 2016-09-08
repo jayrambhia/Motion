@@ -16,15 +16,17 @@
         <activity android:name=".transformation.BasicAsymmetricTransformationActivity" />
         <activity android:name=".transformation.BasicSymmetricTransformationActivity" />
         <activity android:name=".transformation.FullBleedSymmetricExpansionActivity" />
-        <activity android:name=".transformation.FullBleedAsymmetricTransitionActivity" />
-        <activity android:name=".transformation.RadialLinearTransformationActivity"></activity>
-        <activity android:name=".transformation.RadialArcTransformationActivity">
-        </activity>
-        <activity android:name=".transformation.RadialFixedTransformationActivity">
+        <activity android:name=".transformation.FullBleedAsymmetricTransitionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".transformation.RadialLinearTransformationActivity"></activity>
+        <activity android:name=".transformation.RadialArcTransformationActivity">
+        </activity>
+        <activity android:name=".transformation.RadialFixedTransformationActivity">
+
         </activity>
     </application>
 
