@@ -1,12 +1,15 @@
 package com.fenchtose.motion.transformation;
 
+import android.graphics.Rect;
 import android.support.v4.view.animation.FastOutLinearInInterpolator;
 import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.transition.ArcMotion;
 import android.transition.ChangeBounds;
 import android.transition.ChangeImageTransform;
+import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Transition;
 import android.transition.TransitionManager;
@@ -43,9 +46,18 @@ public class FullBleedAsymmetricTransitionActivity extends AppCompatActivity {
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                selection = i;
-                Log.d("seletion: ", ""+i);
+            public void onCheckedChanged(RadioGroup radioGroup, int checkId) {
+                switch (checkId) {
+                    case R.id.transition:
+                        selection = 0;
+                        break;
+                    case R.id.layout_params:
+                        selection = 1;
+                        break;
+                    default:
+                        selection = 1;
+                        break;
+                }
             }
         });
 
@@ -53,14 +65,14 @@ public class FullBleedAsymmetricTransitionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!isExpanded) {
-                    if (selection == 1) {
+                    if (selection%2 == 0) {
                         expandTransition();
                     } else {
                         expand();
                     }
 
                 } else {
-                    if (selection == 1) {
+                    if (selection%2 == 0) {
                         collapseTransition();
                     } else {
                         collapse();
@@ -135,15 +147,15 @@ public class FullBleedAsymmetricTransitionActivity extends AppCompatActivity {
     }
 
     private void collapseTransition() {
-        Transition imageTransition = new ChangeImageTransform();
+        Transition imageTransition = new ChangeBounds();
         imageTransition.setInterpolator(new FastOutLinearInInterpolator())
-                .setDuration(375);
+                .setDuration(375).setStartDelay(75);
         imageTransition.addTarget(imageView);
 
         Transition cardTransition = new ChangeBounds();
         cardTransition.setInterpolator(new FastOutLinearInInterpolator())
-                .setDuration(375).setStartDelay(75);
-        cardTransition.addTarget(cardView).addTarget(imageView);
+                .setDuration(375)/*.setStartDelay(75)*/;
+        cardTransition.addTarget(cardView);
 
         Transition alphaTransition = new Fade();
         alphaTransition.setInterpolator(new FastOutLinearInInterpolator())

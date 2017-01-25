@@ -52,6 +52,7 @@ public class RadialLinearTransformationActivity extends AppCompatActivity {
 
         MotionAnimationUtils.animateAlpha(cardView, 0, 1, 60, 0, new FastOutSlowInInterpolator());
         MotionAnimationUtils.animateY(cardView, -translationY/2, 240);
+        MotionAnimationUtils.animateY(fab, -translationY/2, 240);
         MotionAnimationUtils.animateCircularReveal(cardView, cardView.getWidth()/2, cardView.getHeight()/2,
                 fab.getWidth()/2, radius, 300, 0, new FastOutSlowInInterpolator());
         MotionAnimationUtils.animateAlpha(fab, 1, 0, 60);
@@ -64,6 +65,7 @@ public class RadialLinearTransformationActivity extends AppCompatActivity {
         MotionAnimationUtils.animateCircularReveal(cardView, cardView.getWidth()/2, cardView.getHeight()/2,
                  radius, fab.getWidth()/2, 240, 30, new FastOutSlowInInterpolator());
         MotionAnimationUtils.animateY(cardView, translationY/2, 240);
+        MotionAnimationUtils.animateY(fab, 0, 240);
         MotionAnimationUtils.animateAlpha(fab, 0, 1, 240);
     }
 }

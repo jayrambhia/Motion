@@ -14,12 +14,14 @@
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/transition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="Scene Transition"/>
 
         <RadioButton
+            android:id="@+id/layout_params"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

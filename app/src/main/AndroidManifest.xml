@@ -16,18 +16,23 @@
         <activity android:name=".transformation.BasicAsymmetricTransformationActivity" />
         <activity android:name=".transformation.BasicSymmetricTransformationActivity" />
         <activity android:name=".transformation.FullBleedSymmetricExpansionActivity" />
-        <activity android:name=".transformation.FullBleedAsymmetricTransitionActivity">
+        <activity android:name=".transformation.FullBleedAsymmetricTransitionActivity" />
+        <activity android:name=".transformation.RadialLinearTransformationActivity" />
+        <activity android:name=".transformation.RadialArcTransformationActivity" />
+        <activity android:name=".transformation.RadialFixedTransformationActivity" />
+        <activity android:name=".demo.DemoListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".transformation.RadialLinearTransformationActivity"></activity>
-        <activity android:name=".transformation.RadialArcTransformationActivity">
-        </activity>
-        <activity android:name=".transformation.RadialFixedTransformationActivity">
-
-        </activity>
+        <activity android:name=".choreography.shared_expand.SharedElementExpansionActivity" />
+        <activity android:name=".choreography.shared_expand.SingleSharedElementExpansionActivity" />
+        <activity android:name=".transformation.activity_transition.AsymmetricExpansionBaseActivity" />
+        <activity android:name=".transformation.activity_transition.AsymmetricExpansionReceiverActivity" />
+        <activity android:name=".transformation.activity_transition.SymmetricImageExpansionBaseActivity" />
+        <activity android:name=".transformation.activity_transition.SymmetricImageExpansionReceiverActivity"></activity>
     </application>
 
 </manifest>

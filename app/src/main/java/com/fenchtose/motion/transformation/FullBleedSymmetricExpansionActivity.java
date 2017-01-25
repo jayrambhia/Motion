@@ -37,9 +37,21 @@ public class FullBleedSymmetricExpansionActivity extends AppCompatActivity {
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                Log.d("selection", "" + i);
-                selection = i;
+            public void onCheckedChanged(RadioGroup radioGroup, int checkId) {
+                switch (checkId) {
+                    case R.id.scale:
+                        selection = 1;
+                        break;
+                    case R.id.transition:
+                        selection = 2;
+                        break;
+                    case R.id.layout_params:
+                        selection = 3;
+                        break;
+                    default:
+                        selection = 3;
+                        break;
+                }
             }
         });
 
